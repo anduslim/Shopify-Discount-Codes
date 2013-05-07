@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Promo Code Display</title>
+</head>
+
+<body>
+	<h1>
+		This page shows the promo code hack for shopify using python.
+	</h1>
+	<div id="get_login">
+		<h3>LOGIN Details</h3>
+		<div style="display:block;">
+			<label><strong>HTTP Code:</strong></label>
+			<input style="width:100px; right-padding:80px;" type="text" value="{{result.status_code}}">
+			<label><strong>URL:</strong></label>
+			<input style="width:400px;" type="text" value="{{promocode.url}}">
+		</div>
+		<div style="display:block">
+			<label><strong>TOKEN:</strong></label>
+			<input style="width:400px;" type="text" value="{{dashboardtoken}}">
+		</div>
+		<div>
+			<label><strong>D.TOKEN:</strong></label>
+			<input style="width:400px;" type="text" value="{{token}}">
+		</div>
+		<div>
+			<label><strong>Response Headers:</strong></label>
+			<textarea name="promo_text_header" rows="6" cols="100">{{ result.headers }}</textarea>
+		</div>
+		<div>
+			<label><strong>Response Content:</strong></label>
+			<textarea name="promo_text_content" rows="23" cols="100">{{ result.content }}</textarea>
+		</div>
+	</div>
+	<div id="get_promo">
+		<h3>GET list of promo codes</h3>
+		<label><strong>Promo Codes:</strong></label>
+		<textarea name="promo_text_code" rows="7" cols="100">{{ promocode.content }}</textarea>
+	</div>
+	<div>
+		<label><strong>Response Headers:</strong></label>
+		<textarea name="promo_text_header" rows="6" cols="100">{{ newpromocode.headers }}</textarea>
+	</div>
+	<div id="post_promo">
+		<h3>POST a default promo code</h3>
+		<label><strong>Result:</strong></label>
+		<textarea name="promo_text_post_code" rows="7" cols="100">{{ newpromocode.content }}</textarea>
+	</div>
+
+</body>
+</html>
