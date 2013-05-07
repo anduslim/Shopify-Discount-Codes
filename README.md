@@ -7,10 +7,20 @@
 
 ## Requirements
 
-refer to requirements.txt. To install dependencies, run '''pip install -r requirements.txt'''
+refer to requirements.txt. To install dependencies, run `pip install -r requirements.txt`
 
 ## Usage
-After cloning, run ./manage.py runserver in your command console. Visit http://127.0.0.1:8000/promo/ for results. 
+
+After cloning, 
+1. Create a local_settings.py with
+```python
+from shopifyHack.settings import *
+SHOPIFY_MERCHANT_EMAIL    = 'xyz@abc.xx'
+SHOPIFY_MERCHANT_PASSWORD = 'abcxyz'
+SHOPIFY_STORE = 'xyzabc.myshopify.com'
+ ```
+
+run ./manage.py runserver in your command console. Visit http://127.0.0.1:8000/promo/ for results. 
 
 
 ## Notes
